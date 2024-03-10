@@ -6,3 +6,10 @@ sky:
     database: sky_take_out
     username: root
     password: 111111
+
+
+  alioss:
+    access-key: lRMJbOk3eRmH0vUwAMR_X0aLgggJ6KaQ-F1WEsY3
+    access-secret: 1PGl1Km_HwxCM94E7NHcUs6Ce32MuNCDiKX4JRR5
+    bucket-name: likkjxx-sky-take-out
+    endpoint: http://sa2kra4y7.hd-bkt.clouddn.com
