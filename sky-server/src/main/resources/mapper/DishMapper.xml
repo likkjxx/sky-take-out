@@ -26,12 +26,12 @@
     </update>
 
     <delete id="deleteByIds">
-        delete form dish where id in (
-        <foreach collection="ids" separator="," item="id">
+        delete from dish where id in
+        <foreach collection="ids" open="(" close=")" separator="," item="id">
             #{id}
         </foreach>
-        )
     </delete>
+
     <select id="pageQuery" resultType="com.sky.vo.DishVO">
         SELECT d.* , c.name AS categoryName FROM dish d LEFT OUTER JOIN category c ON d.category_id = c.id
         <where>
@@ -46,6 +46,22 @@
             </if>
         </where>
         order by d.create_time desc
+    </select>
+    <select id="list" resultType="com.sky.entity.Dish">
+        select * from dish
+        <where>
+            <if test="name != null">
+                and name like concat('%',#{name},'%')
+            </if>
+            <if test="categoryId != null">
+                and category_id = #{categoryId}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            and status = #{status}
+        </where>
+        order by create_time desc
     </select>
 
 </mapper>    
