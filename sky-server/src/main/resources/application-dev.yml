@@ -17,3 +17,6 @@ sky:
     access-secret: 1PGl1Km_HwxCM94E7NHcUs6Ce32MuNCDiKX4JRR5
     bucket-name: likkjxx-sky-take-out
     endpoint: http://sa2kra4y7.hd-bkt.clouddn.com
+  wechat:
+    appid: wx62c547b94be9ec70
+    secret: bf24b90f36fab1b7d59e9eee1b863b1f
